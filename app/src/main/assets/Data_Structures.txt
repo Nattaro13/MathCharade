@@ -1,0 +1,6 @@
+abstract data type, array, deque, list, queue, stack,
+priority queue, heap, linked list, skip list, tree, hash table,
+set, iterator, union-find, boolean, character, integer,
+floating-point, double, enum, tuple, graph, bitmap, matrix,
+doubly linked list, bloom filter, adjacency list,
+adjacency matrix, symbol table,
