@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="70dp"
+    android:paddingRight="70dp"
+    android:paddingTop="50dp"
+    style="@style/FullscreenTheme"
+    tools:context="com.charade.mathcharade.MainActivity">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Discrete Math"
+            android:textColor="#FFFFFF"
+            android:background="#000000"
+            android:onClick="getGame"
+            android:textSize="20dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="1dp"
+            />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Calculus"
+            android:textColor="#FFFFFF"
+            android:background="#000000"
+            android:onClick="getGame"
+            android:textSize="20dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="1dp"
+            />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Graph Theory"
+            android:textColor="#FFFFFF"
+            android:background="#000000"
+            android:onClick="getGame"
+            android:textSize="20dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="1dp"
+            />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Trees"
+            android:textColor="#FFFFFF"
+            android:background="#000000"
+            android:onClick="getGame"
+            android:textSize="20dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="1dp"
+            />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Basic Algorithms"
+            android:textColor="#FFFFFF"
+            android:background="#000000"
+            android:onClick="getGame"
+            android:textSize="20dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="1dp"
+            />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Operating Systems"
+            android:textColor="#FFFFFF"
+            android:background="#000000"
+            android:onClick="getGame"
+            android:textSize="20dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="1dp"
+            />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Linear Programming"
+            android:textColor="#FFFFFF"
+            android:background="#000000"
+            android:onClick="getGame"
+            android:textSize="20dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="1dp"
+            />
+
+
+    </LinearLayout>
+
+</ScrollView>

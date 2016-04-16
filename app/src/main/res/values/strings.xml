@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MathCharade</string>
+
+    <string name="dummy_button">Dummy Button</string>
+    <string name="button1">Button 1</string>
+    <string name="dummy_content">Testing\n123</string>
+</resources>
