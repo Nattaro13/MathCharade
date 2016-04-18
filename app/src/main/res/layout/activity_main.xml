@@ -21,7 +21,7 @@
             android:text="Discrete Math"
             android:textColor="#FFFFFF"
             android:background="#000000"
-            android:onClick="getGame"
+            android:onClick="getTest"
             android:textSize="20dp"
             android:layout_marginBottom="5dp"
             android:layout_marginRight="1dp"

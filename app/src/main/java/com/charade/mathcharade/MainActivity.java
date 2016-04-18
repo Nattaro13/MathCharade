@@ -27,6 +27,11 @@ public class MainActivity extends Activity {
         startActivity(intent);
     }
 
+    public void getTest(View view) {
+        Intent intent = new Intent(this, TestActivity.class);
+        startActivity(intent);
+    }
+
     /**
      * Show users about the deck they are playing.
      */
