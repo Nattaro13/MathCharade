@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,6 +7,25 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
     tools:context="com.charade.mathcharade.GameActivity">
 
-</RelativeLayout>
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="GameWord"
+        android:gravity="center"
+        android:paddingTop="100sp"
+        android:textSize="50sp" />
+
+    <TextView
+        android:id="@+id/game_timer"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="timer"
+        android:gravity="center"
+        android:paddingTop="20sp"
+        android:textSize="20sp" />
+
+
+</LinearLayout>
