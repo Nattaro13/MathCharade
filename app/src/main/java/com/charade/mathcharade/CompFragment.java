@@ -18,14 +18,6 @@ import android.view.ViewGroup;
  * create an instance of this fragment.
  */
 public class CompFragment extends Fragment {
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-
-
-
-    // TODO: Rename and change types of parameters
-
-
 
     public CompFragment() {
         // Required empty public constructor
