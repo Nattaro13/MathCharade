@@ -27,5 +27,14 @@
         android:paddingTop="20sp"
         android:textSize="20sp" />
 
+    <TextView
+        android:id="@+id/gyroscope_values"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="gyroscope"
+        android:gravity="center"
+        android:paddingTop="20sp"
+        android:textSize="20sp" />
+
 
 </LinearLayout>
