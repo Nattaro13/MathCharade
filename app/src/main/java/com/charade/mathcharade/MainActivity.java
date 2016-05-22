@@ -16,6 +16,7 @@ import android.view.View;
 
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -124,6 +125,9 @@ public class MainActivity extends AppCompatActivity {
      */
     public void getGame(View view) {
         Intent intent = new Intent(this, GameActivity.class);
+        Button button = (Button) view;
+        String buttonText = button.getText().toString();
+        intent.putExtra("topic", buttonText);
         startActivity(intent);
     }
 
