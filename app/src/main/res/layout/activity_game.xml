@@ -16,26 +16,25 @@
         android:layout_width="match_parent"
         android:text="GameWord"
         android:gravity="center"
-        android:paddingTop="80sp"
-        android:paddingBottom="80sp"
+        android:paddingTop="50sp"
+        android:paddingBottom="50sp"
         android:background="#125688"
         android:textColor="#FFFFFF"
         android:textSize="50sp" />
+
+    <TextView
+        android:id="@+id/gyroscope_values"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:paddingTop="20sp"
+        android:textSize="35sp" />
 
     <TextView
         android:id="@+id/game_timer"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:text="timer"
-        android:gravity="center"
-        android:paddingTop="20sp"
-        android:textSize="20sp" />
-
-    <TextView
-        android:id="@+id/gyroscope_values"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:text="gyroscope"
         android:gravity="center"
         android:paddingTop="20sp"
         android:textSize="20sp" />
