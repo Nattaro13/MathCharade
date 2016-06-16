@@ -3,3 +3,5 @@ language:
 
 jdk:
 - oraclejdk8
+
+sudo: required
