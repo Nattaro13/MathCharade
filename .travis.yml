@@ -6,4 +6,5 @@ jdk:
 
 sudo: required
 
-chmod +x gradlew
+before_script:
+- chmod +x gradlew
