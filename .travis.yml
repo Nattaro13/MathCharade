@@ -5,4 +5,5 @@ jdk:
 - oraclejdk8
 
 sudo: required
+
 chmod +x gradlew
