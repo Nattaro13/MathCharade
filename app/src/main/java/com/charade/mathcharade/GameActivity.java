@@ -28,6 +28,9 @@ public class GameActivity extends Activity implements SensorEventListener {
     private ArrayList<String> wrongList = new ArrayList<>();
     private ArrayList<String> wordList = new ArrayList<>();
 
+
+    CountDownTimer myTimer;
+
     private TextView mWord;
     private TextView mTextField;
     private TextView mVectorField;
@@ -77,7 +80,7 @@ public class GameActivity extends Activity implements SensorEventListener {
         mTextField = (TextView) this.findViewById(R.id.game_timer);
 
         //params for countdown timer: total time, interval
-        CountDownTimer myTimer = new CountDownTimer(20000, 1000) {
+        myTimer = new CountDownTimer(20000, 1000) {
             public void onTick(long millisUntilFinished) {
                 mTextField.setText("Time Left: " + millisUntilFinished / 1000);
             }
@@ -87,8 +90,8 @@ public class GameActivity extends Activity implements SensorEventListener {
                 new Handler().postDelayed(new Runnable() {
                     public void run() {
                         //get the results screen activity
-                        unregister();
                         getResults();
+                        onDestroy();
                     }
                 }, 2000);
             }
@@ -153,21 +156,27 @@ public class GameActivity extends Activity implements SensorEventListener {
         sm.unregisterListener(this);
     }
 
-    protected void onDestroy()
-    {
+    protected void onDestroy() {
         super.onDestroy();
+        myTimer.cancel();
+        Log.w("TIMER", "Timer stopped");
         Log.w("DESTROY", "Destroying Game.java");
         sm.unregisterListener(this);
     }
 
-    protected void onPause()
-    {
+    protected void onPause() {
         super.onPause();
+        sm.unregisterListener(this);
+        myTimer.cancel();
+    }
+
+    protected void onStop() {
+        super.onStop();
+        myTimer.cancel();
         sm.unregisterListener(this);
     }
 
-    protected void onResume()
-    {
+    protected void onResume() {
         super.onResume();
         Log.w("Resume", "Resume");
         //initTimer(timeRemaining);
@@ -201,7 +210,14 @@ public class GameActivity extends Activity implements SensorEventListener {
         if (isReady) {
             if (sensorZ > 8) {
                 isReady = false;
-                correctList.add(mWord.getText().toString());
+                String word = mWord.getText().toString();
+                if (word.equals("Time's up!")) {
+                    return;
+                }
+                if (correctList.contains(word)) {
+                    return;
+                }
+                correctList.add(word);
                 mVectorField.setText("Correct!");
                 mVectorField.setTextColor(Color.parseColor("#00a652"));
 
@@ -217,7 +233,14 @@ public class GameActivity extends Activity implements SensorEventListener {
                 }, 1000);
             } else if (sensorZ < -8) {
                 isReady = false;
-                wrongList.add(mWord.getText().toString());
+                String word = mWord.getText().toString();
+                if (word.equals("Time's up!")) {
+                    return;
+                }
+                if (wrongList.contains(word)) {
+                    return;
+                }
+                wrongList.add(word);
                 mVectorField.setText("Pass");
                 mVectorField.setTextColor(Color.parseColor("#ffcc00"));
 

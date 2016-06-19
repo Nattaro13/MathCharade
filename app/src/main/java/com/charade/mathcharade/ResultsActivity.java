@@ -3,6 +3,7 @@ package com.charade.mathcharade;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
@@ -56,5 +57,10 @@ public class ResultsActivity extends AppCompatActivity {
     public void onBackPressed() {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
+    }
+
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.w("DESTROYED", "Destroyed.");
     }
 }
