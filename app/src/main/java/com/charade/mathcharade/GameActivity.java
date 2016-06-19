@@ -7,7 +7,6 @@ import android.graphics.Color;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
-import android.hardware.SensorEventListener2;
 import android.hardware.SensorManager;
 import android.os.CountDownTimer;
 import android.os.Handler;
@@ -15,13 +14,19 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.Collections;
 
 public class GameActivity extends Activity implements SensorEventListener {
-    private ArrayDeque<String> wordList = new ArrayDeque<>();
+    private ArrayList<String> correctList = new ArrayList<>();
+    private ArrayList<String> wrongList = new ArrayList<>();
+    private ArrayList<String> wordList = new ArrayList<>();
 
     private TextView mWord;
     private TextView mTextField;
@@ -49,6 +54,10 @@ public class GameActivity extends Activity implements SensorEventListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
         fillList();
 
         Intent intent = getIntent();
@@ -63,7 +72,6 @@ public class GameActivity extends Activity implements SensorEventListener {
         mVectorField = (TextView) this.findViewById(R.id.gyroscope_values);
 
         //text field is for loading the game words.
-        //dummy: for now, we load the topic title.
         mWord = (TextView) this.findViewById(R.id.game_word);
         //text field is for the timer.
         mTextField = (TextView) this.findViewById(R.id.game_timer);
@@ -79,6 +87,7 @@ public class GameActivity extends Activity implements SensorEventListener {
                 new Handler().postDelayed(new Runnable() {
                     public void run() {
                         //get the results screen activity
+                        unregister();
                         getResults();
                     }
                 }, 2000);
@@ -88,7 +97,9 @@ public class GameActivity extends Activity implements SensorEventListener {
 
     protected void onStart() {
         super.onStart();
-        mWord.setText(wordList.pollFirst());
+        if (!wordList.isEmpty()) {
+            mWord.setText(wordList.remove(0));
+        }
     }
 
     private void fillList() {
@@ -109,6 +120,8 @@ public class GameActivity extends Activity implements SensorEventListener {
         wordList.add("fork");
         wordList.add("pigeonhole principle");
 
+        Collections.shuffle(wordList);
+
     }
 
     public void setEndText() {
@@ -121,6 +134,8 @@ public class GameActivity extends Activity implements SensorEventListener {
      */
     public void getResults() {
         Intent intent = new Intent(this, ResultsActivity.class);
+        intent.putExtra("correct", correctList);
+        intent.putExtra("wrong", wrongList);
         startActivity(intent);
     }
 
@@ -160,7 +175,7 @@ public class GameActivity extends Activity implements SensorEventListener {
         if (sm.getSensorList(1).size() != 0) {
             Sensor sensor = sm.getSensorList(1).get(0);
             sm.registerListener(this, sensor, 2);
-            Toast.makeText(this, "Started Rotation Sensor", Toast.LENGTH_LONG).show();
+            //Toast.makeText(this, "Started Rotation Sensor", Toast.LENGTH_LONG).show();
         } else {
             Toast.makeText(this, "No Rotation Sensor", Toast.LENGTH_LONG).show();
         }
@@ -186,28 +201,32 @@ public class GameActivity extends Activity implements SensorEventListener {
         if (isReady) {
             if (sensorZ > 8) {
                 isReady = false;
+                correctList.add(mWord.getText().toString());
                 mVectorField.setText("Correct!");
                 mVectorField.setTextColor(Color.parseColor("#00a652"));
 
                 new Handler().postDelayed(new Runnable() {
                     public void run() {
+                        //Load the new Game Word
                         mVectorField.setText("");
                         if (!wordList.isEmpty()) {
-                            mWord.setText(wordList.pollFirst());
+                            mWord.setText(wordList.remove(0));
                         }
                         isReady = true;
                     }
                 }, 1000);
             } else if (sensorZ < -8) {
                 isReady = false;
+                wrongList.add(mWord.getText().toString());
                 mVectorField.setText("Pass");
                 mVectorField.setTextColor(Color.parseColor("#ffcc00"));
 
                 new Handler().postDelayed(new Runnable() {
                     public void run() {
+                        //load the new Game Word
                         mVectorField.setText("");
                         if (!wordList.isEmpty()) {
-                            mWord.setText(wordList.pollFirst());
+                            mWord.setText(wordList.remove(0));
                             isReady = true;
                         }
                     }
