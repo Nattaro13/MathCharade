@@ -1,1 +1,17 @@
-Null pointer, fork, git commit,
+Null Pointer
+Tarjan's Algorithm
+Kolmogorov Complexity
+Euler
+Sieve of Eratosthenes
+AVL Tree
+tautology
+Binomial Heap
+modus ponens
+Power Set
+Cantor's Diagonalisation
+Kruskal's Algorithm
+Bezout's Identity
+well ordered
+Git Commit
+fork
+pigeonhole principle

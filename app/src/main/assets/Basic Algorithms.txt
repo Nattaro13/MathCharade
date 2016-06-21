@@ -1,0 +1,22 @@
+binary search
+quick sort
+quick select
+bubble sort
+Kruskal's algorithm 
+Prim's Algorithm
+Tarjan's Algorithm
+Boruvka's Algorithm
+Topological sort
+bucket sort
+selection sort
+merge sort
+heap sort
+depth first search
+breadth first search
+bellman-ford algorithm
+Dijkstra's algorithm
+Floyd-Warshall algorithm
+weighted union-find
+Edmond-Karp Algorithm
+Ford Fulkerson
+counting sort 

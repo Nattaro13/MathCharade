@@ -1,0 +1,11 @@
+Fundamental theorem of calculus
+monotonic sequence
+epsilon-delta
+Leibniz notation
+Disc method
+Green's Theorem
+Newton's method
+inflection point
+concave
+Riemann sum
+Wronskian

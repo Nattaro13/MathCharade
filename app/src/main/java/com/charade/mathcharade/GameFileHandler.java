@@ -1,5 +1,6 @@
 package com.charade.mathcharade;
 
+import android.content.res.AssetManager;
 import android.util.Log;
 
 import java.io.BufferedReader;
@@ -16,13 +17,14 @@ public class GameFileHandler {
 
 
     public GameFileHandler(String filename) {
-        this.filename = filename;
+        this.filename = filename + ".txt";
     }
 
 
     public void readFileContents() {
         ArrayList<String> words = new ArrayList<>();
         BufferedReader br;
+
 
         try {
             br = new BufferedReader(new FileReader(filename));

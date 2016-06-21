@@ -1,6 +1,18 @@
-permutation, combination, principle of inclusion and exclusion,
-pigeonhole principle, product rule, sum rule, difference rule,
-Binomial Theorem, Pascal's Identity, Vandemonde's Identity,
-generating function, polya theory, Chu Shih Chieh's Identity,
-series, sequences, Sieve of Eratosthenes, matroids,
-Ramsey Numbers, multiset,
+permutation
+combination
+principle of inclusion and exclusion
+pigeonhole principle
+product rule
+sum rule
+difference rule
+Binomial Theorem
+Pascal's Identity
+Vandemonde's Identity
+generating function
+polya theory
+Chu Shih Chieh's Identity
+series
+sequences
+Sieve of Eratosthenes
+Ramsey Numbers
+multiset

@@ -1,7 +1,32 @@
-Binomial tree, AVL tree, Red-Black tree, Binary Search tree,
-Spanning tree, Steiner tree, Fenwick tree, Interval trees,
-Segment tree, Recursion tree, Minimum Spanning tree, Suffix tree,
-Binary tree, Fibonacci tree, Splay tree, Binary heap, Binomial heap,
-Fibonacci heap, Skew heap, Exponential tree, PQ tree, HTree, B-Tree,
-Treap, Cartesian tree, radix tree, parse tree, decision tree,
-abstract syntax tree, minimax tree, finger tree
+Binomial tree
+AVL tree
+Red-Black tree
+Binary Search tree
+Spanning tree
+Steiner tree
+Fenwick tree 
+Interval trees
+Segment tree
+Recursion tree
+Minimum Spanning tree
+Suffix tree
+Binary tree
+Fibonacci tree
+Splay tree
+Binary heap
+Binomial heap
+Fibonacci heap
+Skew heap
+Exponential tree
+PQ tree
+HTree
+B-Tree
+Treap 
+Cartesian tree 
+radix tree
+parse tree
+decision tree
+abstract syntax tree
+minimax tree
+finger tree
+

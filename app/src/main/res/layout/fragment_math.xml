@@ -69,6 +69,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:text="Linear Algebra"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/button_color"
+                android:onClick="getGame"
+                android:textSize="20dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="1dp"
+                />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:text="Linear Programming"
                 android:textColor="#FFFFFF"
                 android:background="@drawable/button_color"

@@ -1,0 +1,9 @@
+lambda calculus 
+turing machines
+partial recursive functions
+decision problem
+automata
+finite state machines
+NP-Complete
+NP-Hard
+

@@ -1,0 +1,11 @@
+page table
+kernel
+translation look-aside buffer
+Buddy Algorithm
+semaphore
+sleep
+livelock
+deadlock
+process
+threads
+shared memory
