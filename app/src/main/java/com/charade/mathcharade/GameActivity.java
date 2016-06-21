@@ -112,13 +112,14 @@ public class GameActivity extends Activity implements SensorEventListener {
         mTextField = (TextView) this.findViewById(R.id.game_timer);
 
         //params for countdown timer: total time, interval
-        myTimer = new CountDownTimer(20000, 1000) {
+        myTimer = new CountDownTimer(90000, 1000) {
             public void onTick(long millisUntilFinished) {
                 mTextField.setText("Time Left: " + millisUntilFinished / 1000);
             }
 
             public void onFinish() {
                 setEndText();
+                unregister();
                 new Handler().postDelayed(new Runnable() {
                     public void run() {
                         //get the results screen activity
