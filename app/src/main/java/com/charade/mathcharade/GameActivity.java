@@ -237,11 +237,16 @@ public class GameActivity extends Activity implements SensorEventListener {
         linear_acceleration[0] = sensorEvent.values[0] - gravity[0];
         linear_acceleration[1] = sensorEvent.values[1] - gravity[1];
         linear_acceleration[2] = sensorEvent.values[2] - gravity[2];
-        curTime = System.currentTimeMillis();
-        currentBuffer = System.currentTimeMillis();
         */
+
         if (isReady) {
             if (sensorZ > 8) {
+                /*
+                String temp2 = String.valueOf(linear_acceleration[0]) + " " + String.valueOf(linear_acceleration[1]) + " " +
+                        String.valueOf(linear_acceleration[2]);
+                String temp3 = String.valueOf(sensorX) + " " + String.valueOf(sensorY) + " " + String.valueOf(sensorZ);
+                Log.w("CORRECT-LA", temp2);
+                Log.w("CORRECT-S", temp3); */
                 isReady = false;
                 String word = mWord.getText().toString();
                 if (word.equals("Time's up!")) {
