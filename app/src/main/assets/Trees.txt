@@ -29,4 +29,6 @@ decision tree
 abstract syntax tree
 minimax tree
 finger tree
+prune
+backtracking
 

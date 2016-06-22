@@ -9,3 +9,28 @@ deadlock
 process
 threads
 shared memory
+segmentation fault
+bootstrapper
+system call
+malloc
+free
+interrupts
+virtual memory
+file system
+FAT32
+NTFS
+Unix
+Windows
+MacOS
+Android
+root
+super user
+principle of least privilege
+page fault
+RAM
+swap table
+physical memory
+Elevator Algorithm
+FSCAN
+CSCAN
+fork bomb 

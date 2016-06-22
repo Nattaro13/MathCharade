@@ -15,3 +15,5 @@ well ordered
 Git Commit
 fork
 pigeonhole principle
+core dump
+

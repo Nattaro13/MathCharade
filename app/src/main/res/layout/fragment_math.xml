@@ -6,6 +6,7 @@
     android:paddingRight="70dp"
     android:paddingTop="50dp"
     style="@style/FullscreenTheme"
+    android:keepScreenOn="true"
     tools:context="com.charade.mathcharade.MathFragment">
 
         <LinearLayout

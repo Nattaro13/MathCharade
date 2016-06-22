@@ -17,6 +17,6 @@ bellman-ford algorithm
 Dijkstra's algorithm
 Floyd-Warshall algorithm
 weighted union-find
-Edmond-Karp Algorithm
+Edmonds-Karp Algorithm
 Ford Fulkerson
 counting sort 
